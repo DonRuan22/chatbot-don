@@ -14,4 +14,4 @@ RUN chmod +x ./entrypoint.sh
 USER 1001
 
 # Run the generated shell script.
-CMD ["./entrypoint.sh"]
+CMD run rasa -p 5005
