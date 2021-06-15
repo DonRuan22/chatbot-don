@@ -14,4 +14,4 @@ RUN chmod +x ./entrypoint.sh
 USER 1001
 
 # Run the generated shell script.
-ENTRYPOINT ["./entrypoint.sh"]
+CMD ["./entrypoint.sh"]
