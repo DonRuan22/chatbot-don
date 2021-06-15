@@ -8,4 +8,4 @@ WORKDIR /app
 COPY ./ ./
 
 # Run the generated shell script.
-ENTRYPOINT ["./app/entrypoint.sh"]
+ENTRYPOINT ["entrypoint.sh"]
