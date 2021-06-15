@@ -7,6 +7,5 @@ WORKDIR /app
 #copy everything in ./actions directory (your custom actions code) to /app/actions in container
 COPY ./ ./
 
-
-
-CMD rasa run -p ${PORT} --cors "*"
+# Run the generated shell script.
+ENTRYPOINT ["./entrypoint.sh"]
