@@ -9,4 +9,4 @@ COPY ./ ./
 
 EXPOSE 5005
 
-RUN rasa run
+RUN run
