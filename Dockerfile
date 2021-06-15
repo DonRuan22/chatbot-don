@@ -8,6 +8,5 @@ WORKDIR /app
 COPY ./ ./
 
 
-RUN pip install rasa
 # Run the generated shell script.
 CMD run rasa -p 5005 --cors * --enable-api 
