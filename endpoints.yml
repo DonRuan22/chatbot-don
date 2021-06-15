@@ -41,5 +41,5 @@
 #  password: password
 #  queue: queue
 
-action_endpoint:
- url: "http://app:5055/webhook"
+#action_endpoint:
+# url: "http://app:5055/webhook"

@@ -9,4 +9,4 @@ COPY ./ ./
 
 EXPOSE 5005
 
-CMD ['rasa','run']
+CMD rasa run
