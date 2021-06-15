@@ -16,6 +16,6 @@ services:
       - run
 
   app:
-    image: image-rasa 
+    image: gcr.io/shopdon-1614963409256/don:$SHORT_SHA 
     expose:
       - 5055
