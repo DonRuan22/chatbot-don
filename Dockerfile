@@ -8,5 +8,4 @@ WORKDIR /app
 COPY ./ ./
 
 # Run the generated shell script.
-#ENTRYPOINT ["./entrypoint.sh"]
-ENTRYPOINT ["rasa", "run", "-p", "5005"]
+ENTRYPOINT ["./entrypoint.sh"]
