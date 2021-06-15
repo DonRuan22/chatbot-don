@@ -7,6 +7,6 @@ WORKDIR /app
 #copy everything in ./actions directory (your custom actions code) to /app/actions in container
 COPY ./ ./
 
-EXPOSE 5005
 
-CMD rasa run
+
+CMD rasa run -p ${PORT} --cors "*"
