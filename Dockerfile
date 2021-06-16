@@ -9,6 +9,7 @@ COPY ./ ./
 
 EXPOSE 5005
 
-CMD $(echo "rasa run -p $PORT")
+#CMD $(echo "rasa run -p $PORT")
 # Run the generated shell script.
+ENTRYPOINT ["./entrypoint.sh"]
 #CMD ['run', 'rasa', '-p', '5005', '--cors', '*', '--enable-api'] 
