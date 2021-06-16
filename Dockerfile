@@ -9,4 +9,4 @@ COPY ./ ./
 
 
 # Run the generated shell script.
-ENTRYPOINT ['run', 'rasa', '-p', '5005', '--cors', '*', '--enable-api'] 
+CMD ['run', 'rasa', '-p', '5005', '--cors', '*', '--enable-api'] 
