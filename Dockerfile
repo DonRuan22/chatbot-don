@@ -7,6 +7,8 @@ WORKDIR /app
 #copy everything in ./actions directory (your custom actions code) to /app/actions in container
 COPY ./ ./
 
+EXPOSE 5005
 
+CMD $(echo "rasa run -p $PORT)
 # Run the generated shell script.
-CMD ['run', 'rasa', '-p', '5005', '--cors', '*', '--enable-api'] 
+#CMD ['run', 'rasa', '-p', '5005', '--cors', '*', '--enable-api'] 
