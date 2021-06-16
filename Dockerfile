@@ -9,4 +9,4 @@ COPY ./ ./
 
 
 # Run the generated shell script.
-CMD run rasa -p 5005 --cors * --enable-api 
+ENTRYPOINT run rasa -p 5005 --cors * --enable-api 
