@@ -9,7 +9,9 @@ COPY ./ ./
 
 EXPOSE 5005
 
+USER root
 RUN chmod +x ./entrypoint.sh
+USER 1001
 
 #CMD $(echo "rasa run -p $PORT")
 # Run the generated shell script.
