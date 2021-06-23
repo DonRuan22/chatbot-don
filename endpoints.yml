@@ -43,3 +43,5 @@
 
 #action_endpoint:
 # url: "http://app:5055/webhook"
+nlg:
+ url:https:https://nlgdonexp-edml6m2f3a-uc.a.run.app/chatbot
