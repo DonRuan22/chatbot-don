@@ -8,7 +8,7 @@ WORKDIR /app
 COPY ./ ./
 
 EXPOSE 5005
-
+RUN ls
 USER root
 RUN chmod +x ./entrypoint-actions.sh
 USER 1001
