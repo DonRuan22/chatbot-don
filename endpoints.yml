@@ -47,4 +47,4 @@ nlg:
  url: https://nlgdonexp-edml6m2f3a-uc.a.run.app/chatbot
  
 action_endpoint:
-  url: http://localhost:5055/webhook
+  url: https://don-actions-edml6m2f3a-uc.a.run.app/webhook
