@@ -10,7 +10,7 @@ COPY ./ ./
 EXPOSE 5005
 
 USER root
-RUN chmod +x ./entrypoint.sh
+RUN chmod +x ./entrypoint-actions.sh
 USER 1001
 
 #CMD $(echo "rasa run -p $PORT")
