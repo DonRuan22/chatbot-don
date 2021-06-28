@@ -10,13 +10,13 @@ intents:
   - bot_challenge
   
 actions:
-    - iamabot
     - greet
     - cheer_up
     - did_that_help
     - happy
     - action_goodbye
     - action_iamabot
+    - action-nlg
 
 session_config:
   session_expiration_time: 60

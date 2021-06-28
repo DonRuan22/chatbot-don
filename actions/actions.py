@@ -11,6 +11,9 @@ from typing import Any, Text, Dict, List
 #
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
+from rasa.shared.core.trackers import DialogueStateTracker, EventVerbosity
+import requests
+import json
 #
 #
 class ActionGreet(Action):
@@ -89,5 +92,31 @@ class ActionBot(Action):
              domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 #
          dispatcher.utter_message(text="I am a bot, powered by Ruan Donino.")
+         
+#
+         return []
+
+class ActionNLGBot(Action):
+#
+     def name(self) -> Text:
+         return "action-nlg"
+#
+     def run(self, dispatcher: CollectingDispatcher,
+             tracker: Tracker,
+             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+         
+         tracker_state = tracker.current_state()
+         payload = {'tracker': tracker_state}
+         #string_json= '{"tracker":' + json.dumps(tracker_state)+ '}'
+         #parsed = json.loads(string_json)
+         #print(json.dumps(parsed, indent=4))
+         print('\n')
+         print('\n')
+         print('\n')
+         # Create a new resource
+         response = requests.post('https://nlgdonexp-edml6m2f3a-uc.a.run.app/chatbot', json = payload)
+#
+         print(response)
+         dispatcher.utter_message(text= response.json()["text"])
 #
          return []
