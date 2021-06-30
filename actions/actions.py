@@ -110,9 +110,6 @@ class ActionNLGBot(Action):
          #string_json= '{"tracker":' + json.dumps(tracker_state)+ '}'
          #parsed = json.loads(string_json)
          #print(json.dumps(parsed, indent=4))
-         print('\n')
-         print('\n')
-         print('\n')
          # Create a new resource
          response = requests.post('https://nlgdonexp-edml6m2f3a-uc.a.run.app/chatbot', json = payload)
 #
