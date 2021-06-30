@@ -1,4 +1,4 @@
 #!/bin/bash
 ls
 #rasa run actions
-rasa run -p ${PORT} --cors "*" --credentials credentials.yml 
+rasa run -p ${PORT} --cors "*" --enable-api --credentials credentials.yml --debug
