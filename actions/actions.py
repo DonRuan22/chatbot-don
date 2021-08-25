@@ -14,6 +14,9 @@ from rasa_sdk.executor import CollectingDispatcher
 from rasa.shared.core.trackers import DialogueStateTracker, EventVerbosity
 import requests
 import json
+import logging
+logger = logging.getLogger(__name__)
+
 #
 #
 class ActionGreet(Action):
@@ -104,16 +107,27 @@ class ActionNLGBot(Action):
      def run(self, dispatcher: CollectingDispatcher,
              tracker: Tracker,
              domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+         data = {}
+         pos = 0
+         for event in tracker.events:    
+             if event.get("text"):
+                 #logger.debug(event.get("text"))
+                 data[pos] = event.get("text")
+                 logger.debug(data)
+                 pos = pos+1
          
-         tracker_state = tracker.current_state()
-         payload = {'tracker': tracker_state}
+         json_data = json.dumps(data)
+         logger.debug(json_data)
+         #tracker_state = tracker.current_state()
+         payload = data
+         logger.debug(payload)
          #string_json= '{"tracker":' + json.dumps(tracker_state)+ '}'
          #parsed = json.loads(string_json)
          #print(json.dumps(parsed, indent=4))
          # Create a new resource
          response = requests.post('https://nlgdonexp-edml6m2f3a-uc.a.run.app/chatbot', json = payload)
 #
-         print(response)
+         
          dispatcher.utter_message(text= response.json()["text"])
 #
          return []
