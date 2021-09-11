@@ -125,7 +125,7 @@ class ActionNLGBot(Action):
          #parsed = json.loads(string_json)
          #print(json.dumps(parsed, indent=4))
          # Create a new resource
-         response = requests.post('https://nlgdonexp-edml6m2f3a-uc.a.run.app/chatbot', json = payload)
+         response = requests.post('https://nlgdonexp-vc5xcezzwa-uc.a.run.app/chatbot', json = payload)
 #
          
          dispatcher.utter_message(text= response.json()["text"])
